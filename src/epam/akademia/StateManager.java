@@ -14,7 +14,9 @@ public class StateManager {
     public String actualPath; 
     
     public StateManager(){
-        
+        actualPath = System.getProperty("user.dir");
     }
+    
+    public string 
     
 }
