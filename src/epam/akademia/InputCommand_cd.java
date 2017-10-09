@@ -26,9 +26,11 @@ public class InputCommand_cd extends Command {
         System.out.println("execute "+command);
         String[] arrayString = command.split(" ");
         if(arrayString[1].equals("..")){
-        
+            stateManager.goUp();
         }
-                
+        else {
+            
+        }
         //stateManager. 
                 
                 

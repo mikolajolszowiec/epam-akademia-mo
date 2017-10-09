@@ -12,9 +12,27 @@ package epam.akademia;
 public class DirectoryManager {
     
     public String getStartingPath(){
-        return System.getProperty("user.dir");
+        String returnString = System.getProperty("user.dir").replace("\\","/");
+        return returnString;
     }
     
-    public boolean 
+    public boolean ifFolderExists(String folder){
+        
+        return true;
+    }
     
+    public String goToFolder(String folder){
+        
+        return folder;
+    }
+    
+    public String goUp(String folder){
+        String[] newArrayPath = folder.split("/");
+        String returnPath = newArrayPath[0];
+        
+        for(int i=1; i<newArrayPath.length-2; i++){
+            returnPath ="/"+ newArrayPath[i];
+        }
+        return returnPath;
+    }
 }

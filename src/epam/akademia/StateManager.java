@@ -28,18 +28,20 @@ public class StateManager {
     }
     
     public boolean goUp(){
-        actualPath = directoryManager.goUp();
+        actualPath = directoryManager.goUp(actualPath);
+        return true;
     }
     
     public boolean goTo(String folder){
         if(directoryManager.ifFolderExists(folder))
         {
-            directoryManager.goToFolder(folder);
-            //actualPath = directoryManager.
+            actualPath = directoryManager.goToFolder(folder);
+            return true;
         }
         else
         {
             System.out.println("Wrong path.");
+            return false;
         }
     }
     
