@@ -39,4 +39,23 @@ public class DirectoryManager {
         }
         return returnPath;
     }
+    
+    public String getDirectory(String path){
+        File file = new File(path);
+        String[] names = file.list();
+        String returnString = "";
+        for(String name : names)
+        {
+            if (new File(path + "/" + name).isDirectory())
+            {
+                returnString += "DIR   "+ name + "\n";
+            }
+            else 
+            {
+                returnString += "FILE  "+ name + "\n";
+            }
+            
+        }
+        return returnString;
+    }
 }

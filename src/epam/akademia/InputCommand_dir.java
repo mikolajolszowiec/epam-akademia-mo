@@ -19,7 +19,7 @@ public class InputCommand_dir extends Command {
     }
     
     public void executeCommand(String command){
-        System.out.println("execute "+command);
-        
+        //System.out.println("execute "+command);
+        stateManager.printDir();
     }
 }

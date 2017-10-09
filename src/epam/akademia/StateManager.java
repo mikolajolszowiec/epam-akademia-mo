@@ -45,4 +45,8 @@ public class StateManager {
         }
     }
     
+    public void printDir(){
+        
+        System.out.println(directoryManager.getDirectory(actualPath));
+    }
 }
