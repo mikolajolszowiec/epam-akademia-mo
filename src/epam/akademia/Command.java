@@ -11,7 +11,7 @@ package epam.akademia;
  */
 abstract public class Command{
     
-    String commandString;
+    private String commandString;
     
     public Command(String name){
         commandString = name;
@@ -22,6 +22,6 @@ abstract public class Command{
     }
     
     public void executeCommand(){
-        
+        System.out.println("execute command");
     }
 }

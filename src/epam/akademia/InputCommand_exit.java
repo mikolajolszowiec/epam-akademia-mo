@@ -11,6 +11,10 @@ package epam.akademia;
  */
 public class InputCommand_exit extends Command {
     
+    public InputCommand_exit(){
+        super("exit");
+        
+    }
     
     public void executeCommand(){
         System.out.println("execute exit");

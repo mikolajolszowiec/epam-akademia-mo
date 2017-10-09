@@ -4,19 +4,18 @@
  * and open the template in the editor.
  */
 package epam.akademia;
+import java.util.Scanner;
 
 /**
  *
  * @author User
  */
-public class InputCommand_cd extends Command {
+public class InputManager {
     
-    public InputCommand_cd(){
-        super("cd");
+    public String readString(){
         
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
     }
     
-    public void executeCommand(){
-        System.out.println("execute cd");
-    }
 }

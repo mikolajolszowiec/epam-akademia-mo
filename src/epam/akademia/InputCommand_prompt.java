@@ -11,6 +11,12 @@ package epam.akademia;
  */
 public class InputCommand_prompt extends Command {
     
+    public InputCommand_prompt(){
+        super("prompt");
+        
+    }
+    
+    
     public void executeCommand(){
         System.out.println("execute prompt");
     }

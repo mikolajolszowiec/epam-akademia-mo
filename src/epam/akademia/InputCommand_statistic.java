@@ -11,6 +11,10 @@ package epam.akademia;
  */
 public class InputCommand_statistic extends Command{
     
+    public InputCommand_statistic(){
+        super("statistic");
+        
+    }
     
     public void executeCommand(){
         System.out.println("execute statistic");

@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package epam.akademia;
-import java.util.Scanner;
 /**
  *
  * @author User
@@ -17,15 +16,16 @@ public class EpamAkademia {
     
     public static void main(String[] args) {
         
-        Scanner scanner = new Scanner(System.in);
         CommandsManager commandsManager = new CommandsManager();
+        InputManager inputManager = new InputManager();
+        OutputManager outputManager = new OutputManager();
         
         while(true){
             System.out.print("$>");
             //String userInput = scanner.nextLine();
             //System.out.println("User said: " + userInput);
-            String userInput = scanner.nextLine();
-            System.out.println("User said: " + userInput);
+            commandsManager.inputCommand(inputManager.readString());
+            //System.out.println("User said: " + userInput);
             
             
         }

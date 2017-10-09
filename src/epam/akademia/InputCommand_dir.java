@@ -11,11 +11,15 @@ package epam.akademia;
  */
 public class InputCommand_dir extends Command {
     
-    public Command(String name){
-        commandString = name;
+    //private String commandString;
+    
+    public InputCommand_dir(){
+        super("dir");
+        
     }
     
     public void executeCommand(){
         System.out.println("execute dir");
+        
     }
 }

@@ -15,15 +15,26 @@ public class CommandsManager {
     
     
     public CommandsManager() {
+        commands = new ArrayList();
         commands.add(new InputCommand_dir());
-        
+        commands.add(new InputCommand_cd());
+        commands.add(new InputCommand_exit());
+        commands.add(new InputCommand_prompt());
+        commands.add(new InputCommand_statistic());
+        commands.add(new InputCommand_tree());
     }
     
     public void inputCommand(String inputString){
-        for(Command commands : commands)
+        boolean correctCommand = false;
+        for(Command command : commands)
         {
-        
+            if(inputString.equals(command.getCommandString())){
+                command.executeCommand();
+                correctCommand = true;
+                break;
+            }
         }
+        if(!correctCommand){System.out.println("wrong command");}
     }
     
 }

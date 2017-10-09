@@ -11,6 +11,11 @@ package epam.akademia;
  */
 public class InputCommand_tree extends Command {
     
+    public InputCommand_tree(){
+        super("tree");
+        
+    }
+    
     public void executeCommand(){
         System.out.println("execute tree");
     }

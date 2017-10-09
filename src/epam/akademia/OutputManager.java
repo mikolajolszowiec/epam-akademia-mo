@@ -9,14 +9,12 @@ package epam.akademia;
  *
  * @author User
  */
-public class InputCommand_cd extends Command {
+public class OutputManager {
     
-    public InputCommand_cd(){
-        super("cd");
-        
+    
+    
+    public void printOutput(String string){
+        System.out.println(string);
     }
     
-    public void executeCommand(){
-        System.out.println("execute cd");
-    }
 }
