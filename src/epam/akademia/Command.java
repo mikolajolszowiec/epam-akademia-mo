@@ -12,16 +12,27 @@ package epam.akademia;
 abstract public class Command{
     
     private String commandString;
+    protected StateManager stateManager;
     
-    public Command(String name){
+    public Command(String name, StateManager sm){
         commandString = name;
+        stateManager = sm;
     }
     
     public String getCommandString(){
         return commandString;
     }
     
-    public void executeCommand(){
-        System.out.println("execute command");
+    public boolean isCommandEqual(String command){
+        if(command.equals(commandString)){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    public void executeCommand(String inputString){
+        System.out.println("execute "+ inputString);
     }
 }

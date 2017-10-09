@@ -11,11 +11,12 @@ package epam.akademia;
  */
 public class InputCommand_exit extends Command {
     
-    public InputCommand_exit(){
-        super("exit");
+    public InputCommand_exit(StateManager sm){
+        super("exit", sm);
     }
     
-    public void executeCommand(){
+    public void executeCommand(String command){
+        System.out.println("Bye.");
         System.exit(0);
     }
 }

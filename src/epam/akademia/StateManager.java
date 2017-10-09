@@ -11,12 +11,36 @@ package epam.akademia;
  */
 public class StateManager {
     
-    public String actualPath; 
+    private String actualPath; 
+    private DirectoryManager directoryManager;
     
     public StateManager(){
-        actualPath = System.getProperty("user.dir");
+        directoryManager = new DirectoryManager();
+        actualPath = directoryManager.getStartingPath();
     }
     
-    public string 
+    public void setPath(String newPath){
+        actualPath = newPath;
+    }
+    
+    public String getPath(){
+        return actualPath;
+    }
+    
+    public boolean goUp(){
+        actualPath = directoryManager.goUp();
+    }
+    
+    public boolean goTo(String folder){
+        if(directoryManager.ifFolderExists(folder))
+        {
+            directoryManager.goToFolder(folder);
+            //actualPath = directoryManager.
+        }
+        else
+        {
+            System.out.println("Wrong path.");
+        }
+    }
     
 }

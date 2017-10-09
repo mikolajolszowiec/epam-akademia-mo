@@ -11,12 +11,26 @@ package epam.akademia;
  */
 public class InputCommand_cd extends Command {
     
-    public InputCommand_cd(){
-        super("cd");
+    public InputCommand_cd(StateManager sm){
+        super("cd", sm);
         
     }
     
-    public void executeCommand(){
-        System.out.println("execute cd");
+    public boolean isCommandEqual(String command){
+        String[] arrayString = command.split(" ");
+        if(arrayString[0].equals(this.getCommandString()) && arrayString.length==2){ return true; }
+        return false;
+    }
+    
+    public void executeCommand(String command){
+        System.out.println("execute "+command);
+        String[] arrayString = command.split(" ");
+        if(arrayString[1].equals("..")){
+        
+        }
+                
+        //stateManager. 
+                
+                
     }
 }

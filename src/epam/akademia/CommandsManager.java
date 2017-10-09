@@ -14,22 +14,23 @@ public class CommandsManager {
     private ArrayList<Command> commands;
     
     
-    public CommandsManager() {
+    public CommandsManager(StateManager sM) {
         commands = new ArrayList();
-        commands.add(new InputCommand_dir());
-        commands.add(new InputCommand_cd());
-        commands.add(new InputCommand_exit());
-        commands.add(new InputCommand_prompt());
-        commands.add(new InputCommand_statistic());
-        commands.add(new InputCommand_tree());
+        commands.add(new InputCommand_dir(sM));
+        commands.add(new InputCommand_cd(sM));
+        commands.add(new InputCommand_exit(sM));
+        commands.add(new InputCommand_prompt(sM));
+        commands.add(new InputCommand_statistic(sM));
+        commands.add(new InputCommand_tree(sM));
     }
     
     public void inputCommand(String inputString){
         boolean correctCommand = false;
         for(Command command : commands)
         {
-            if(inputString.equals(command.getCommandString())){
-                command.executeCommand();
+            //if(inputString.equals(command.getCommandString())){
+            if(command.isCommandEqual(inputString)){
+                command.executeCommand(inputString);
                 correctCommand = true;
                 break;
             }

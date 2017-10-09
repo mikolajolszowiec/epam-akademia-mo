@@ -16,13 +16,14 @@ public class EpamAkademia {
     
     public static void main(String[] args) {
         
-        CommandsManager commandsManager = new CommandsManager();
+        StateManager stateManager = new StateManager();
+        CommandsManager commandsManager = new CommandsManager(stateManager);
         InputManager inputManager = new InputManager();
         OutputManager outputManager = new OutputManager();
-        StateManager stateManager = new StateManager();
         
         while(true){
-            System.out.print("$>");
+            System.out.println(stateManager.getPath());
+            System.out.println("$>");
             //String userInput = scanner.nextLine();
             //System.out.println("User said: " + userInput);
             commandsManager.inputCommand(inputManager.readString());

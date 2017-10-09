@@ -9,14 +9,12 @@ package epam.akademia;
  *
  * @author User
  */
-public class InputCommand_statistic extends Command{
+public class DirectoryManager {
     
-    public InputCommand_statistic(StateManager sm){
-        super("statistic", sm);
-        
+    public String getStartingPath(){
+        return System.getProperty("user.dir");
     }
     
-    public void executeCommand(String command){
-        System.out.println("execute "+command);
-    }
+    public boolean 
+    
 }

@@ -13,13 +13,13 @@ public class InputCommand_dir extends Command {
     
     //private String commandString;
     
-    public InputCommand_dir(){
-        super("dir");
+    public InputCommand_dir(StateManager sm){
+        super("dir", sm);
         
     }
     
-    public void executeCommand(){
-        System.out.println("execute dir");
+    public void executeCommand(String command){
+        System.out.println("execute "+command);
         
     }
 }
