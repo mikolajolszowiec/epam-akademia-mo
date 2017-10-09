@@ -29,7 +29,7 @@ public class InputCommand_cd extends Command {
             stateManager.goUp();
         }
         else {
-            
+            stateManager.goTo(arrayString[1]);
         }
         //stateManager. 
                 

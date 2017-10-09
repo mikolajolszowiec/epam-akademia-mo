@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package epam.akademia;
-
+import java.io.File;
 /**
  *
  * @author User
@@ -16,22 +16,26 @@ public class DirectoryManager {
         return returnString;
     }
     
-    public boolean ifFolderExists(String folder){
+    public boolean ifFolderExists(String path, String folder){
         
-        return true;
+        if (new File(path+ "/" + folder).isDirectory())
+        {
+            return true;
+        }
+        return false;
     }
     
-    public String goToFolder(String folder){
-        
-        return folder;
+    public String goToFolder(String path, String folder){
+        String returnPath = path + "/" + folder;
+        return returnPath;
     }
     
-    public String goUp(String folder){
-        String[] newArrayPath = folder.split("/");
+    public String goUp(String path){
+        String[] newArrayPath = path.split("/");
         String returnPath = newArrayPath[0];
         
-        for(int i=1; i<newArrayPath.length-2; i++){
-            returnPath ="/"+ newArrayPath[i];
+        for(int i=1; i<newArrayPath.length-1; i++){
+            returnPath +="/"+ newArrayPath[i];
         }
         return returnPath;
     }

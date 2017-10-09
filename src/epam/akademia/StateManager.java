@@ -33,9 +33,9 @@ public class StateManager {
     }
     
     public boolean goTo(String folder){
-        if(directoryManager.ifFolderExists(folder))
+        if(directoryManager.ifFolderExists(actualPath, folder))
         {
-            actualPath = directoryManager.goToFolder(folder);
+            actualPath = directoryManager.goToFolder(actualPath, folder);
             return true;
         }
         else
