@@ -9,13 +9,12 @@ package epam.akademia;
  *
  * @author User
  */
-public class InputCommand_exit extends Command {
+public class StateManager {
     
-    public InputCommand_exit(){
-        super("exit");
+    public String actualPath; 
+    
+    public StateManager(){
+        
     }
     
-    public void executeCommand(){
-        System.exit(0);
-    }
 }

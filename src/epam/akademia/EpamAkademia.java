@@ -19,6 +19,7 @@ public class EpamAkademia {
         CommandsManager commandsManager = new CommandsManager();
         InputManager inputManager = new InputManager();
         OutputManager outputManager = new OutputManager();
+        StateManager stateManager = new StateManager();
         
         while(true){
             System.out.print("$>");
