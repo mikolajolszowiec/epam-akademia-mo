@@ -16,21 +16,8 @@ public class EpamAkademia {
     
     public static void main(String[] args) {
         
-        StateManager stateManager = new StateManager();
-        CommandsManager commandsManager = new CommandsManager(stateManager);
-        InputManager inputManager = new InputManager();
-        OutputManager outputManager = new OutputManager();
-        
-        while(true){
-            System.out.println(stateManager.getPath());
-            System.out.println("$>");
-            //String userInput = scanner.nextLine();
-            //System.out.println("User said: " + userInput);
-            commandsManager.inputCommand(inputManager.readString());
-            //System.out.println("User said: " + userInput);
-            
-            
-        }
+        ApplicationManager applicationManager = new ApplicationManager();
+        applicationManager.runShell();
     }
     
 }

@@ -31,13 +31,15 @@ public class DirectoryManager {
     }
     
     public String goUp(String path){
-        String[] newArrayPath = path.split("/");
+        /*String[] newArrayPath = path.split("/");
         String returnPath = newArrayPath[0];
         
         for(int i=1; i<newArrayPath.length-1; i++){
             returnPath +="/"+ newArrayPath[i];
-        }
-        return returnPath;
+        }*/
+        File file = new File(path);
+        
+        return file.getParent();
     }
     
     public String getDirectory(String path){
